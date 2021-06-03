@@ -1,0 +1,301 @@
+/** -------------------------------------------------------------------- */
+/* Fonts */
+/* --------------------------------------------------------------------- */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/** -------------------------------------------------------------------- */
+/* Global Style */
+/* --------------------------------------------------------------------- */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	outline: none;
+}
+/* -----------------------
+Define Custom Css Variables
+----------------------------*/
+:root {
+	--main-colo: #b43105;
+	--blue: #4641de;
+	--bg-container: #d9d8d9;
+	--bleu-dark: #18293c;
+	--text-one: #0040ff;
+	--txt-two: #ff4000;
+	--figure-1: #3a393b;
+	--figure-2: #f88e16;
+	--figure-3: #df0f0f;
+	--white-alpha-40: rgba(255, 255, 255, 0.5);
+	--white-alpha-25: rgba(255, 255, 255, 0.25);
+	--backdrop-filter-blur: blur(5px);
+}
+
+::before,
+::after {
+	box-sizing: border-box;
+}
+
+body {
+	min-height: 100vh;
+	font-size: 16px;
+	color: var(--bleu-dark);
+	line-height: 1.5;
+	overflow-x: hidden;
+	font-family: 'Poppins', sans-serif;
+	background-attachment: fixed;
+	font-weight: 300;
+	-webkit-top-highlight-color: transparent;
+	padding: 5vh 15px;
+	background-image: linear-gradient(
+		to bottom right,
+		#0040ff,
+		#7955f3,
+		#ef3e51,
+		#ff4000
+	);
+}
+
+body::before {
+	content: '';
+	position: fixed;
+	left: 0;
+	top: 0;
+	height: 100%;
+	width: 100%;
+	background-color: var(--bg-container);
+	z-index: -1;
+	opacity: 0.12;
+}
+
+a {
+	text-decoration: none;
+}
+
+h1,
+h2 {
+	font-weight: 600;
+}
+
+h3,
+h4,
+h5,
+h6 {
+	font-weight: 500;
+}
+
+img {
+	max-width: 100%;
+	vertical-align: middle;
+}
+
+section {
+	background-color: var(--white-alpha-25);
+	border: 2px solid var(--white-alpha-40);
+	min-height: 90vh;
+	border-radius: 30px;
+	backdrop-filter: var(--backdrop-filter-blur);
+}
+
+.main {
+	max-width: 1200px;
+	margin: auto;
+}
+
+.container {
+	padding: 0 40px;
+	width: 100%;
+}
+
+.row {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.align-item-center {
+	align-items: center;
+}
+
+.hidden {
+	display: none !important;
+}
+
+.sec-padding {
+	padding: 80px 0;
+}
+
+/* ----- Section Title ----- */
+.section-title {
+	padding: 0 15px;
+	width: 100%;
+	text-align: center;
+	margin-bottom: 40px;
+}
+
+.section-title h2 {
+	font-size: 40px;
+	text-transform: capitalize;
+}
+/* ----- Custom Scroll ----- */
+::-webkit-scrollbar {
+	width: 6px;
+}
+
+::-webkit-scrollbar-track {
+	background-color: var(--text-one);
+}
+
+::-webkit-scrollbar-thumb {
+	background-color: var(--bg-container);
+}
+/* ----- Buttons ----- */
+.btn {
+	line-height: 1.5;
+	background-color: var(--white-alpha-25);
+	border: 1px solid var(--white-alpha-40);
+	padding: 10px 20px;
+	display: inline-block;
+	border-radius: 30px;
+	color: var(--main-colo);
+	font-weight: 500;
+	text-transform: capitalize;
+	font-family: inherit;
+	font-size: 16px;
+	cursor: pointer;
+	user-select: none;
+	position: relative;
+	overflow: hidden;
+	vertical-align: middle;
+	transition: color 0.3s ease;
+}
+
+.btn::before {
+	content: '';
+	position: absolute;
+	left: 0;
+	top: 0;
+	height: 100%;
+	width: 0%;
+	background-color: var(--main-colo);
+	z-index: -1;
+	transition: width 0.3s ease;
+}
+
+.btn:hover::before {
+	width: 100%;
+}
+
+.btn:hover {
+	color: var(--bg-container);
+}
+
+/* ----- Anime-Figure ----- */
+
+/** -------------------------------------------------------------------- */
+/* Home Section */
+/* --------------------------------------------------------------------- */
+.home-section {
+	display: flex;
+	padding: 120px 0;
+}
+
+.home-text,
+.home-img {
+	width: 50%;
+	padding: 15px;
+}
+
+.home-text p {
+	font-size: 19px;
+}
+
+.home-text h1 {
+	font-size: 50px;
+	text-transform: capitalize;
+}
+
+span:nth-child(2n + 1) {
+	color: var(--txt-two);
+	font-size: 60px;
+	font-weight: bold;
+}
+
+span:nth-child(2n + 2) {
+	color: var(--text-one);
+	font-size: 60px;
+	font-weight: bold;
+}
+
+.home-text h2 {
+	font-size: 20px;
+	text-transform: capitalize;
+	font-weight: 300;
+	margin: 0 0 30px;
+}
+
+.home-text .btn {
+	margin: 0 15px 15px 0;
+}
+
+.home-img .img-box {
+	max-width: 360px;
+	background-color: var(--white-alpha-25);
+	border-radius: 50%;
+	border: 8px solid var(--white-alpha-25);
+	margin: auto;
+}
+
+.home-img .img-box img {
+	width: 100%;
+	border-radius: 50%;
+}
+
+/** -------------------------------------------------------------------- */
+/* About Section */
+/* --------------------------------------------------------------------- */
+.about-img {
+	width: 40%;
+	padding: 0 15px;
+}
+
+.about-text {
+	width: 60%;
+	padding: 0 15px;
+}
+
+.about-img .img-box {
+	background-color: var(--white-alpha-25);
+	max-width: 380px;
+	border: 1px solid var(--white-alpha-40);
+	margin: auto;
+	border-radius: 10px;
+}
+
+.about-img .img-box img {
+	width: 100%;
+}
+
+.about-text p {
+	font-size: 17px;
+	font-weight: 400;
+}
+
+.about-text h3 {
+	text-transform: capitalize;
+	font-size: 20px;
+	margin: 20px 0;
+}
+
+.about-text .skills {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.about-text .skills-item {
+	background-color: var(--white-alpha-25);
+	border: 1px solid var(--white-alpha-40);
+	padding: 5px 15px;
+	font-weight: 400;
+	text-transform: capitalize;
+	margin: 0 10px 10px 0;
+	border-radius: 20px;
+}
