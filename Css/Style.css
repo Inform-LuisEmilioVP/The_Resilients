@@ -55,6 +55,10 @@ body {
 	);
 }
 
+body.hide-scrolling {
+	overflow-y: hidden;
+}
+
 body::before {
 	content: '';
 	position: fixed;
@@ -103,6 +107,11 @@ section {
 .main {
 	max-width: 1200px;
 	margin: auto;
+	transition: all 0.5s ease-in-out;
+}
+
+.main.fade-out {
+	opacity: 0;
 }
 
 .container {
@@ -659,6 +668,11 @@ Services Popup
 	width: 100%;
 	height: 100%;
 	z-index: 200;
+	visibility: hidden;
+}
+
+.services-popup.open {
+	visibility: visible;
 	overflow-y: auto;
 }
 
@@ -678,6 +692,14 @@ Services Popup
 	width: 100%;
 	border: 1px solid var(--white-alpha-40);
 	backdrop-filter: var(--backdrop-filter-blur);
+	opacity: 0;
+	transform: scale(0.9);
+}
+
+.services-popup.open .pp-content {
+	opacity: 1;
+	transform: scale(1);
+	transition: all 0.5s ease;
 }
 
 .pp-header {
@@ -713,4 +735,10 @@ Services Popup
 .description p {
 	font-size: 17px;
 	font-weight: 400;
+}
+
+.pp-body .general-info li {
+	margin-bottom: 10px;
+	font-weight: 500;
+	text-transform: capitalize;
 }
