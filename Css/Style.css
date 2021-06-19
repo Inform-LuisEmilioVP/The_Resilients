@@ -742,3 +742,205 @@ Services Popup
 	font-weight: 500;
 	text-transform: capitalize;
 }
+
+/** -------------------------------------------------------------------- */
+/* Team Section */
+/* --------------------------------------------------------------------- */
+.card-content {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	width: 940px;
+	gap: 15px;
+	margin: auto;
+	justify-items: center;
+	align-items: center;
+}
+
+.card {
+	width: 300px;
+	height: 250px;
+	overflow: hidden;
+	margin: 8px;
+	padding: 10px 30px;
+	background-color: var(--white-alpha-25);
+	border: 1px solid var(--white-alpha-40);
+	border-radius: 2%;
+	text-align: center;
+	box-shadow: 0px 1px 5px 0px var(--txt-two);
+	transition: all 0.4s ease-in-out;
+}
+
+.card:hover {
+	height: 550px;
+	width: 300px;
+	border-radius: 10px;
+	box-shadow: 0px 2px 10px var(--text-one);
+}
+
+.card-header img {
+	position: relative;
+	border-radius: 50%;
+	display: block;
+	width: 200px;
+	height: 200px;
+	border-top: 8px solid var(--white-alpha-40);
+	border-bottom: 8px solid var(--white-alpha-40);
+	object-fit: cover;
+	margin: 20px auto;
+	transition: all 0.3s ease;
+}
+
+.card-header {
+	position: relative;
+}
+
+.card-header::before,
+.card-header::after {
+	content: '';
+	position: absolute;
+	opacity: 0.7;
+}
+
+.card-header::after {
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	top: 0;
+	right: 25px;
+	background-color: var(--figure-2);
+	z-index: 20;
+}
+
+.card-header::before {
+	width: 70px;
+	height: 70px;
+	border-radius: 20px;
+	bottom: 0;
+	left: -10px;
+	transform: rotate(120deg);
+	background-color: var(--blue);
+}
+
+.card-icons {
+	display: flex;
+	justify-content: center;
+	position: relative;
+	margin-bottom: 15px;
+	list-style: none;
+}
+
+.card-icons li {
+	width: 40px;
+	height: 40px;
+	margin: 0 5px;
+	line-height: 40px;
+	text-align: center;
+	border-radius: 50%;
+	background-color: var(--white-alpha-25);
+	border: 2px solid var(--white-alpha-40);
+	transform: scale(0);
+	transition: all 0.5s ease;
+}
+
+.card-icons li a {
+	height: 100%;
+	width: 100%;
+	border-radius: 50%;
+	display: block;
+	line-height: 40px;
+	transition: all 0.3s ease;
+	color: var(--main-colo);
+}
+
+.card-icons li a:hover {
+	transform: scale(1.1);
+	color: var(--bg-container);
+	background-color: var(--main-colo);
+}
+
+.card-icons li:nth-child(1) {
+	transition-delay: 0.2s;
+}
+
+.card-icons li:nth-child(2) {
+	transition-delay: 0.3s;
+}
+
+.card-icons li:nth-child(3) {
+	transition-delay: 0.4s;
+}
+
+.displace {
+	opacity: 0;
+	transition: all 0.5s ease;
+	transform: translateY(-45px);
+}
+
+.displace:nth-child(1) {
+	transition-delay: 0.1s;
+}
+
+.displace:nth-child(2) {
+	transition-delay: 0.2s;
+}
+
+.displace:nth-child(3) {
+	transition-delay: 0.4s;
+}
+
+.social {
+	transform: scale(0);
+	opacity: 0;
+	transition: all 0.4s ease;
+}
+
+.card:hover .social {
+	opacity: 1;
+	transform: scale(1);
+}
+
+.card:hover .displace {
+	transform: translateY(0);
+	opacity: 1;
+}
+
+.info-personal h2 {
+	font-size: 25px;
+	font-weight: 400;
+	padding: 10px;
+	line-height: 25px;
+}
+
+.info-personal h3 {
+	font-size: 18px;
+	font-weight: 200;
+}
+
+.info-personal p {
+	margin: 15px 0;
+	font-weight: 300;
+}
+
+.card-send-email {
+	text-align: center;
+	margin-top: 25px;
+}
+
+/* ------ Responsive Card ----- */
+@media screen and (max-width: 710px) {
+	.card-content {
+		grid-template-columns: 1fr;
+	}
+}
+
+@media screen and (max-width: 680px) {
+	.card-content {
+		grid-template-columns: 1fr;
+	}
+}
+
+@media screen and (max-width: 852px) {
+	.card-content {
+		gap: 5px;
+	}
+}
