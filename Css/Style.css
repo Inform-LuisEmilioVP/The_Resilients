@@ -128,9 +128,9 @@ section {
 	align-items: center;
 }
 
-.hidden {
+/* .hidden {
 	display: none !important;
-}
+} */
 
 .sec-padding {
 	padding: 80px 0;
@@ -508,6 +508,13 @@ span:nth-child(2n + 2) {
 	margin-bottom: 30px;
 }
 
+.content-details h2 {
+	color: var(--bg-container);
+}
+
+.content-details p {
+	color: var(--bg-container);
+}
 /* ----- Hover effect for the slider ----- */
 .content-hover-1 {
 	width: 1000px;
@@ -613,6 +620,7 @@ span:nth-child(2n + 2) {
 .content-text p {
 	font-size: 17px;
 	margin-top: 10px;
+	font-weight: 500;
 	opacity: 0;
 	transform: scale(1.5);
 	transition: all 0.4s ease;
