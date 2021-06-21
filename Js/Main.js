@@ -51,3 +51,36 @@ function servicesItemDetails(serviceItem) {
 		'.services-item-details'
 	).innerHTML;
 }
+
+/*------------------ Testimonial Slider ------------------*/
+const btn = document.getElementsByClassName('btn-slide');
+const slider = document.getElementById('slider');
+
+btn[0].onclick = function () {
+	slider.style.transform = 'translateX(0px)';
+	for (i = 0; i < 4; i++) {
+		btn[i].classList.remove('active-sld');
+	}
+	this.classList.add('active-sld');
+};
+btn[1].onclick = function () {
+	slider.style.transform = 'translateX(-800px)';
+	for (i = 0; i < 4; i++) {
+		btn[i].classList.remove('active-sld');
+	}
+	this.classList.add('active-sld');
+};
+btn[2].onclick = function () {
+	slider.style.transform = 'translateX(-1600px)';
+	for (i = 0; i < 4; i++) {
+		btn[i].classList.remove('active-sld');
+	}
+	this.classList.add('active-sld');
+};
+btn[3].onclick = function () {
+	slider.style.transform = 'translateX(-2400px)';
+	for (i = 0; i < 4; i++) {
+		btn[i].classList.remove('active-sld');
+	}
+	this.classList.add('active-sld');
+};
