@@ -1,7 +1,73 @@
 /** -------------------------------------------------------------------- */
 /* Responsive Design */
 /* --------------------------------------------------------------------- */
+@media (max-width: 991px) {
+	.container {
+		padding: 0;
+	}
+	.home-text,
+	.home-img {
+		width: 100%;
+	}
+	.home-text {
+		text-align: center;
+	}
+	.home-img {
+		order: -1;
+	}
+	.home-img .img-box {
+		max-width: 300px;
+	}
+	.home-text .btn {
+		margin: 0 7px 15px;
+	}
+	.service-item {
+		width: calc(50% - 30px);
+	}
+}
 
+@media (max-width: 767px) {
+	.contact-form,
+	.contact-info,
+	.about-text,
+	.about-img {
+		width: 100%;
+	}
+	.about-text {
+		margin-top: 30px;
+	}
+	.service-item {
+		width: calc(100% - 30px);
+	}
+	.pp-inner {
+		padding: 30px 15px;
+	}
+	.contact-info {
+		order: -1;
+		margin-bottom: 15px;
+	}
+}
+
+@media (max-width: 575px) {
+	.section-title h2,
+	span:nth-child(2n + 1),
+	span:nth-child(2n + 2),
+	.home-text h1 {
+		font-size: 30px;
+	}
+	.home-text h2 {
+		font-size: 18px;
+	}
+	.header-menu .nav-inner-items ul li a {
+		font-size: 30px;
+	}
+	.pp-header h3 {
+		font-size: 20px;
+	}
+	.slide_button {
+		bottom: 320px;
+	}
+}
 /* ------ Responsive Card ----- */
 @media screen and (max-width: 820px) {
 	.team-card-content {

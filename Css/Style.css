@@ -385,6 +385,17 @@ button {
 	height: 30px;
 	border-color: var(--txt-two);
 }
+
+.Page-about .about-carrousel {
+	max-height: 80vh;
+}
+
+.inicio {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-top: -50px;
+}
 /** -------------------------------------------------------------------- */
 /* Header */
 /* --------------------------------------------------------------------- */
@@ -491,7 +502,7 @@ button {
 	visibility: visible;
 }
 
-.header-menu .nav-inner {
+.header-menu .nav-inner-items {
 	min-height: calc(100vh - 70px);
 	max-width: 1200px;
 	margin: auto;
@@ -507,16 +518,16 @@ button {
 	transition: all 0.5s ease;
 }
 
-.header-menu.active .nav-inner {
+.header-menu.active .nav-inner-items {
 	opacity: 1;
 }
 
-.header-menu .nav-inner ul li {
+.header-menu .nav-inner-items ul li {
 	text-align: center;
 }
 
-.header-menu .nav-inner ul li a {
-	font-size: 37px;
+.header-menu .nav-inner-items ul li a {
+	font-size: 40px;
 	text-transform: capitalize;
 	color: var(--bleu-dark);
 	display: block;
@@ -526,7 +537,7 @@ button {
 	position: relative;
 }
 
-.header-menu .nav-inner ul li a::before {
+.header-menu .nav-inner-items ul li a::before {
 	content: '';
 	position: absolute;
 	right: 0;
@@ -539,11 +550,11 @@ button {
 	transition: width 0.5s ease;
 }
 
-.header-menu .nav-inner ul li a:hover:before {
+.header-menu .nav-inner-items ul li a:hover:before {
 	width: 100%;
 }
 
-.header-menu .nav-inner ul li a:hover {
+.header-menu .nav-inner-items ul li a:hover {
 	color: var(--main-colo);
 }
 /** -------------------------------------------------------------------- */
@@ -622,10 +633,14 @@ span:nth-child(2n + 2) {
 }
 
 .about-img .img-box {
-	background-color: var(--white-alpha-25);
 	max-width: 380px;
-	border: 1px solid var(--white-alpha-40);
 	margin: auto;
+	border: 1px solid var(--white-alpha-40);
+	background-image: url(../Img/Testimonial/pattern-bg.svg);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-color: var(--white-alpha-25);
 	border-radius: 10px;
 }
 
@@ -1112,7 +1127,7 @@ span:nth-child(2n + 2) {
 
 .card-site-web {
 	text-align: center;
-	margin-bottom: 25px;
+	margin-top: 25px;
 }
 
 /** -------------------------------------------------------------------- */
