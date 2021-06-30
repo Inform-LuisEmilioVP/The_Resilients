@@ -20,7 +20,7 @@ function hideSection() {
 	document.querySelector('section.active').classList.toggle('fade-out');
 }
 function toggleNavbar() {
-	document.querySelector('.header').classList.toggle('active');
+	document.querySelector('.header-menu').classList.toggle('active');
 }
 
 /*------------------ Active Section ------------------*/
@@ -102,34 +102,34 @@ function servicesItemDetails(serviceItem) {
 }
 
 /*------------------ Testimonial Slider ------------------*/
-const btn = document.getElementsByClassName('btn-slide');
-const slider = document.getElementById('slider');
+const next = document.querySelector('.nextbtn');
+const prev = document.querySelector('.prevbtn');
+const slides = document.querySelectorAll('.slide_items');
 
-btn[0].onclick = function () {
-	slider.style.transform = 'translateX(0px)';
-	for (i = 0; i < 4; i++) {
-		btn[i].classList.remove('active-sld');
+let index = 0;
+display(index);
+function display(index) {
+	slides.forEach((slide) => {
+		slide.style.display = 'none';
+	});
+	slides[index].style.display = 'flex';
+}
+
+function nextSlide() {
+	index++;
+	if (index > slides.length - 1) {
+		index = 0;
 	}
-	this.classList.add('active-sld');
-};
-btn[1].onclick = function () {
-	slider.style.transform = 'translateX(-800px)';
-	for (i = 0; i < 4; i++) {
-		btn[i].classList.remove('active-sld');
+	display(index);
+}
+
+function prevSlide() {
+	index--;
+	if (index < 0) {
+		index = slides.length - 1;
 	}
-	this.classList.add('active-sld');
-};
-btn[2].onclick = function () {
-	slider.style.transform = 'translateX(-1600px)';
-	for (i = 0; i < 4; i++) {
-		btn[i].classList.remove('active-sld');
-	}
-	this.classList.add('active-sld');
-};
-btn[3].onclick = function () {
-	slider.style.transform = 'translateX(-2400px)';
-	for (i = 0; i < 4; i++) {
-		btn[i].classList.remove('active-sld');
-	}
-	this.classList.add('active-sld');
-};
+	display(index);
+}
+
+next.addEventListener('click', nextSlide);
+prev.addEventListener('click', prevSlide);

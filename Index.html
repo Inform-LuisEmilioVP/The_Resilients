@@ -7,6 +7,8 @@
 		<title>The Resilients</title>
 		<!-- Page Icon -->
 		<link rel="icon" href="Img/TR-Icon.png" />
+		<!-- Custom Vendor Bootstrap -->
+		<link rel="stylesheet" href="Vendor/Css/bootstrap.min.css" />
 		<!-- Custom  Vendor fontawesome -->
 		<link rel="stylesheet" href="Vendor/Css/fontawesome.css" />
 		<!-- Custom Css Style.css -->
@@ -39,13 +41,13 @@
 		<!-- Main Start -->
 		<div class="main hidden">
 			<!-- Header Start -->
-			<header class="header">
+			<header class="header-menu">
 				<div class="container">
 					<div class="row flex-end">
 						<button type="button" class="nav-togger">
 							<span></span>
 						</button>
-						<nav class="nav">
+						<nav class="header-nav">
 							<div class="nav-inner">
 								<ul>
 									<li><a href="#home" class="nav-item link-item">Inicio</a></li>
@@ -187,99 +189,167 @@
 							<a href="#contacts" class="btn link-item">Contáctanos</a>
 						</div>
 					</div>
-					<!-- Carrousel About Page Strart-->
+
+					<!-- Carrousel About Info Start -->
 					<div class="row">
-						<div class="about-slider">
-							<div class="slider-img" id="img-1">
-								<a href="#img-6"><i class="fas fa-angle-left"></i></a>
-								<img src="Img/Slider/1.jpg" alt="Slider-Img" />
-								<a href="#img-2"><i class="fas fa-angle-right"></i></a>
-								<div class="content-details">
-									<h3>Somos Parte de ti</h3>
-									<h2>Abiertos de lunes a viernes</h2>
-									<p>9:00 am a 12:30 pm y 2:00 pm a 6:00 pm</p>
+						<div class="about-carrousel">
+							<div class="content-slider">
+								<div
+									id="carouselExampleIndicators"
+									class="carousel slide"
+									data-bs-ride="carousel"
+								>
+									<div class="carousel-indicators">
+										<button
+											type="button"
+											data-bs-target="#carouselExampleIndicators"
+											data-bs-slide-to="0"
+											class="active"
+											aria-current="true"
+											aria-label="Slide 1"
+										></button>
+										<button
+											type="button"
+											data-bs-target="#carouselExampleIndicators"
+											data-bs-slide-to="1"
+											aria-label="Slide 2"
+										></button>
+										<button
+											type="button"
+											data-bs-target="#carouselExampleIndicators"
+											data-bs-slide-to="2"
+											aria-label="Slide 3"
+										></button>
+										<button
+											type="button"
+											data-bs-target="#carouselExampleIndicators"
+											data-bs-slide-to="3"
+											aria-label="Slide 4"
+										></button>
+										<button
+											type="button"
+											data-bs-target="#carouselExampleIndicators"
+											data-bs-slide-to="4"
+											aria-label="Slide 5"
+										></button>
+										<button
+											type="button"
+											data-bs-target="#carouselExampleIndicators"
+											data-bs-slide-to="5"
+											aria-label="Slide 6"
+										></button>
+									</div>
+									<div class="carousel-inner">
+										<div class="carousel-item active">
+											<img
+												src="Img/Slider/1.jpg"
+												class="d-block w-100"
+												alt="Carrousel-Img"
+											/>
+											<div class="carousel-caption d-none d-md-block">
+												<h4>Somos Parte de ti</h4>
+												<h5>Abiertos de lunes a viernes</h5>
+												<p>9:00 am a 12:30 pm y 2:00 pm a 6:00 pm</p>
+											</div>
+										</div>
+										<div class="carousel-item">
+											<img
+												src="Img/Slider/2.jpg"
+												class="d-block w-100"
+												alt="Carrousel-Img"
+											/>
+											<div class="carousel-caption d-none d-md-block">
+												<h5>Sábados</h5>
+												<p>9:00 am a 3:00 pm</p>
+											</div>
+										</div>
+										<div class="carousel-item">
+											<img
+												src="Img/Slider/3.jpg"
+												class="d-block w-100"
+												alt="Carrousel-Img"
+											/>
+											<div class="carousel-caption d-none d-md-block">
+												<h2>The Resilient</h2>
+												<p>
+													Estamos ubicados en la Plaza San Juan, calle
+													independencia.Siempre al servicio de la gente
+												</p>
+											</div>
+										</div>
+										<div class="carousel-item">
+											<img
+												src="Img/Slider/4.jpg"
+												class="d-block w-100"
+												alt="Carrousel-Img"
+											/>
+											<div class="carousel-caption d-none d-md-block">
+												<h2>The Resilient</h2>
+												<p>
+													El diseño y el desarrollo digital es parte de nosotros.
+												</p>
+											</div>
+										</div>
+										<div class="carousel-item">
+											<img
+												src="Img/Slider/5.jpg"
+												class="d-block w-100"
+												alt="Carrousel-Img"
+											/>
+											<div class="carousel-caption d-none d-md-block">
+												<h2>The Resilient</h2>
+												<p>
+													Dispuestos para hacer de nuestro trabajo lo mejor de lo
+													mejor, Preparados para brindar siempre nuestros servicios.
+												</p>
+											</div>
+										</div>
+										<div class="carousel-item">
+											<img
+												src="Img/Slider/6.jpg"
+												class="d-block w-100"
+												alt="Carrousel-Img"
+											/>
+											<div class="carousel-caption d-none d-md-block">
+												<h2>The Resilient</h2>
+												<p>
+													El diseño para nosotros es demostrar lo hermosa que es la
+													vida y los grandes momentos vividos por nuestros clientes y
+													sus habilidades, reflejar estos sentimientos a través de
+													los colores, las formas es realmente maravilloso.
+												</p>
+											</div>
+										</div>
+									</div>
+									<button
+										class="carousel-control-prev"
+										type="button"
+										data-bs-target="#carouselExampleIndicators"
+										data-bs-slide="prev"
+									>
+										<span
+											class="carousel-control-prev-icon"
+											aria-hidden="true"
+										></span>
+										<span class="visually-hidden">Previous</span>
+									</button>
+									<button
+										class="carousel-control-next"
+										type="button"
+										data-bs-target="#carouselExampleIndicators"
+										data-bs-slide="next"
+									>
+										<span
+											class="carousel-control-next-icon"
+											aria-hidden="true"
+										></span>
+										<span class="visually-hidden">Next</span>
+									</button>
 								</div>
-							</div>
-
-							<div class="slider-img" id="img-2">
-								<a href="#img-1"><i class="fas fa-angle-left"></i></a>
-								<img src="Img/Slider/2.jpg" alt="Slider-Img" />
-								<a href="#img-3"><i class="fas fa-angle-right"></i></a>
-								<div class="content-details">
-									<h2>Sábados</h2>
-									<p>9:00 am a 3:00 pm</p>
-								</div>
-							</div>
-
-							<div class="slider-img" id="img-3">
-								<a href="#img-2"><i class="fas fa-angle-left"></i></a>
-								<img src="Img/Slider/3.jpg" alt="Slider-Img" />
-								<a href="#img-4"><i class="fas fa-angle-right"></i></a>
-								<div class="content-text">
-									<h2>The Resilient</h2>
-									<p>
-										Estamos ubicados en la Plaza San Juan, calle
-										independencia.Siempre al servicio de la gente
-									</p>
-								</div>
-								<div class="content-hover-1"></div>
-								<div class="content-hover-2"></div>
-								<div class="content-hover-3"></div>
-								<div class="content-hover-4"></div>
-							</div>
-
-							<div class="slider-img" id="img-4">
-								<a href="#img-3"><i class="fas fa-angle-left"></i></a>
-								<img src="Img/Slider/4.jpg" alt="Slider-Img" />
-								<a href="#img-5"><i class="fas fa-angle-right"></i></a>
-								<div class="content-text">
-									<h2>The Resilient</h2>
-									<p>El diseño y el desarrollo digital es parte de nosotros.</p>
-								</div>
-								<div class="content-hover-1"></div>
-								<div class="content-hover-2"></div>
-								<div class="content-hover-3"></div>
-								<div class="content-hover-4"></div>
-							</div>
-
-							<div class="slider-img" id="img-5">
-								<a href="#img-4"><i class="fas fa-angle-left"></i></a>
-								<img src="Img/Slider/5.jpg" alt="Slider-Img" />
-								<a href="#img-6"><i class="fas fa-angle-right"></i></a>
-								<div class="content-text">
-									<h2>The Resilient</h2>
-									<p>
-										Dispuestos para hacer de nuestro trabajo lo mejor de lo mejor,
-										Preparados para brindar siempre nuestros servicios.
-									</p>
-								</div>
-								<div class="content-hover-1"></div>
-								<div class="content-hover-2"></div>
-								<div class="content-hover-3"></div>
-								<div class="content-hover-4"></div>
-							</div>
-
-							<div class="slider-img" id="img-6">
-								<a href="#img-5"><i class="fas fa-angle-left"></i></a>
-								<img src="Img/Slider/6.jpg" alt="Slider-Img" />
-								<a href="#img-1"><i class="fas fa-angle-right"></i></a>
-								<div class="content-text">
-									<h2>The Resilient</h2>
-									<p>
-										El diseño para nosotros es demostrar lo hermosa que es la vida y
-										los grandes momentos vividos por nuestros clientes y sus
-										habilidades, reflejar estos sentimientos a través de los colores,
-										las formas es realmente maravilloso.
-									</p>
-								</div>
-								<div class="content-hover-1"></div>
-								<div class="content-hover-2"></div>
-								<div class="content-hover-3"></div>
-								<div class="content-hover-4"></div>
 							</div>
 						</div>
 					</div>
-					<!-- Carrousel About Page End-->
+					<!-- Carrousel About Info End -->
 				</div>
 			</section>
 			<!-- About Section End -->
@@ -465,142 +535,150 @@
 						</div>
 					</div>
 					<div class="row">
-						<div class="card-content">
+						<div class="team-card-content">
 							<!-- Card Item Start -->
-							<div class="card">
-								<div class="card-header">
+							<div class="team-card">
+								<div class="card-img">
 									<img src="Img/Team/Team-1.jpg" alt="Card-Img" />
 								</div>
-								<div class="card-icons">
-									<li class="social">
-										<a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
+								<div class="card-social-link">
+									<li class="link-item-web">
+										<a href="#" target="_black"><i class="fab fa-facebook-f"></i></a>
 									</li>
-									<li class="social">
-										<a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+									<li class="link-item-web">
+										<a href="#" target="_black"><i class="fab fa-twitter"></i></a>
 									</li>
-									<li class="social">
-										<a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+									<li class="link-item-web">
+										<a href="#" target="_black"><i class="fab fa-instagram"></i></a>
 									</li>
 								</div>
-								<div class="card-info">
-									<div class="info-personal displace">
-										<h2>Luis Emilio</h2>
+								<div class="card-item-info">
+									<div class="card-text displace"><h3>Luis Emilio</h3></div>
+									<div class="card-text displace">
+										<span class="pp-team">Valensuela</span>
 									</div>
-									<div class="info-personal displace">
-										<h3>Gerente general</h3>
-									</div>
-									<div class="info-personal displace">
+									<div class="card-text displace"><h5>Diseñador Web</h5></div>
+									<div class="card-text displace">
 										<p>
-											Creador de grupo The Resilients, programador y diseñador web
-											intermedio.
+											Programador Frond-End intermedio, en el área del desarrollo de
+											aplicaciones y sitios web, estáticos y dinámicos.
 										</p>
 									</div>
 								</div>
-								<div class="card-send-web">
-									<a href="#" class="btn social" target="_black"
-										><i class="fas fa-laptop"></i> Sitio Web</a
+								<div class="card-site-web">
+									<a href="#" class="btn link-item-web"
+										><i class="fa fa-laptop"></i> Ver sitio Web</a
 									>
 								</div>
 							</div>
 							<!-- Card Item End -->
+
 							<!-- Card Item Start -->
-							<div class="card">
-								<div class="card-header">
+							<div class="team-card">
+								<div class="card-img">
 									<img src="Img/Team/Team-2.jpg" alt="Card-Img" />
 								</div>
-								<div class="card-icons">
-									<li class="social">
-										<a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
+								<div class="card-social-link">
+									<li class="link-item-web">
+										<a href="#" target="_black"><i class="fab fa-facebook-f"></i></a>
 									</li>
-									<li class="social">
-										<a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+									<li class="link-item-web">
+										<a href="#" target="_black"><i class="fab fa-twitter"></i></a>
 									</li>
-									<li class="social">
-										<a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+									<li class="link-item-web">
+										<a href="#" target="_black"><i class="fab fa-instagram"></i></a>
 									</li>
 								</div>
-								<div class="card-info">
-									<div class="info-personal displace">
-										<h2>Josias Manasse</h2>
+								<div class="card-item-info">
+									<div class="card-text displace">
+										<h3>Luis Emilio</h3>
+										<span class="pp-team">Valensuela</span>
 									</div>
-									<div class="info-personal displace">
-										<h3>Intruso general</h3>
-									</div>
-									<div class="info-personal displace">
-										<p>Progamador full en el area Web</p>
+									<div class="card-text displace"><h5>Diseñador Web</h5></div>
+									<div class="card-text displace">
+										<p>
+											Programador Frond-End intermedio, en el área del desarrollo de
+											aplicaciones y sitios web, estáticos y dinámicos.
+										</p>
 									</div>
 								</div>
-								<div class="card-send-web">
-									<a href="#" class="btn social" target="_black"
-										><i class="fas fa-laptop"></i> Sitio Web</a
+								<div class="card-site-web">
+									<a href="#" class="btn link-item-web"
+										><i class="fa fa-laptop"></i> Ver sitio Web</a
 									>
 								</div>
 							</div>
 							<!-- Card Item End -->
+
 							<!-- Card Item Start -->
-							<div class="card">
-								<div class="card-header">
+							<div class="team-card">
+								<div class="card-img">
 									<img src="Img/Team/Team-3.jpg" alt="Card-Img" />
 								</div>
-								<div class="card-icons">
-									<li class="social">
-										<a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
+								<div class="card-social-link">
+									<li class="link-item-web">
+										<a href="#" target="_black"><i class="fab fa-facebook-f"></i></a>
 									</li>
-									<li class="social">
-										<a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+									<li class="link-item-web">
+										<a href="#" target="_black"><i class="fab fa-twitter"></i></a>
 									</li>
-									<li class="social">
-										<a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+									<li class="link-item-web">
+										<a href="#" target="_black"><i class="fab fa-instagram"></i></a>
 									</li>
 								</div>
-								<div class="card-info">
-									<div class="info-personal displace">
-										<h2>Cristopher Alcantar</h2>
+								<div class="card-item-info">
+									<div class="card-text displace"><h3>Luis Emilio</h3></div>
+									<div class="card-text displace">
+										<span class="pp-team">Valensuela</span>
 									</div>
-									<div class="info-personal displace">
-										<h3>Chihuahua general</h3>
-									</div>
-									<div class="info-personal displace">
-										<p>Ensamblador y diseñador, realiza terminaciones</p>
+									<div class="card-text displace"><h5>Diseñador Web</h5></div>
+									<div class="card-text displace">
+										<p>
+											Programador Frond-End intermedio, en el área del desarrollo de
+											aplicaciones y sitios web, estáticos y dinámicos.
+										</p>
 									</div>
 								</div>
-								<div class="card-send-web">
-									<a href="#" class="btn social" target="_black"
-										><i class="fas fa-laptop"></i> Sitio Web</a
+								<div class="card-site-web">
+									<a href="#" class="btn link-item-web"
+										><i class="fa fa-laptop"></i> Ver sitio Web</a
 									>
 								</div>
 							</div>
 							<!-- Card Item End -->
+
 							<!-- Card Item Start -->
-							<div class="card">
-								<div class="card-header">
+							<div class="team-card">
+								<div class="card-img">
 									<img src="Img/Team/Team-4.jpg" alt="Card-Img" />
 								</div>
-								<div class="card-icons">
-									<li class="social">
-										<a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
+								<div class="card-social-link">
+									<li class="link-item-web">
+										<a href="#" target="_black"><i class="fab fa-facebook-f"></i></a>
 									</li>
-									<li class="social">
-										<a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+									<li class="link-item-web">
+										<a href="#" target="_black"><i class="fab fa-twitter"></i></a>
 									</li>
-									<li class="social">
-										<a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+									<li class="link-item-web">
+										<a href="#" target="_black"><i class="fab fa-instagram"></i></a>
 									</li>
 								</div>
-								<div class="card-info">
-									<div class="info-personal displace">
-										<h2>Isaac Adames</h2>
+								<div class="card-item-info">
+									<div class="card-text displace"><h3>Luis Emilio</h3></div>
+									<div class="card-text displace">
+										<span class="pp-team">Valensuela</span>
 									</div>
-									<div class="info-personal displace">
-										<h3>Pasolas general</h3>
-									</div>
-									<div class="info-personal displace">
-										<p>Diseñador gráfico y dueño del las pasolas modernas</p>
+									<div class="card-text displace"><h5>Diseñador Web</h5></div>
+									<div class="card-text displace">
+										<p>
+											Programador Frond-End intermedio, en el área del desarrollo de
+											aplicaciones y sitios web, estáticos y dinámicos.
+										</p>
 									</div>
 								</div>
-								<div class="card-send-web">
-									<a href="#" class="btn social" target="_black"
-										><i class="fas fa-laptop"></i> Sitio Web</a
+								<div class="card-site-web">
+									<a href="#" class="btn link-item-web"
+										><i class="fa fa-laptop"></i> Ver sitio Web</a
 									>
 								</div>
 							</div>
@@ -620,81 +698,82 @@
 						</div>
 					</div>
 					<div class="row">
-						<div class="testimonial-content">
-							<div class="indicator">
-								<span class="btn-slide active-sld"></span>
-								<span class="btn-slide"></span>
-								<span class="btn-slide"></span>
-								<span class="btn-slide"></span>
-							</div>
-							<div class="testimonial-slide">
-								<div class="slide-row" id="slider">
-									<!-- Testimonial Slider Start -->
-									<div class="slide-content">
-										<div class="user-text">
-											<p>
-												Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut
-												consectetur numquam, iure reiciendis earum suscipit veniam
-												consequatur distinctio obcaecatir.
-											</p>
-											<h3>Alex</h3>
-											<p>Montero</p>
-										</div>
-										<div class="user-img">
-											<img src="Img/Testimonial/1.jpg" alt="Testimonial-Img" />
-										</div>
+						<div class="testimonial">
+							<div class="slider-content">
+								<!-- Slider Items Start -->
+								<div class="slide_items slide-1">
+									<div class="slide_text">
+										<p class="testimonial_text">
+											"Lorem ipsum dolor sit amet consectetur adipisicing elit.
+											Perspiciatis, id est saepe autem voluptatibus voluptates.""
+										</p>
+										<p class="author-text">
+											Alejandra <span class="txt">Diseñadara</span>
+										</p>
 									</div>
-									<!-- Testimonial Slider End -->
-									<!-- Testimonial Slider Start -->
-									<div class="slide-content">
-										<div class="user-text">
-											<p>
-												Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut
-												consectetur numquam, iure reiciendis earum suscipit veniam
-												consequatur distinctio obcaecatir.
-											</p>
-											<h3>Alejandra</h3>
-											<p>Baez</p>
-										</div>
-										<div class="user-img">
-											<img src="Img/Testimonial/2.jpg" alt="Testimonial-Img" />
-										</div>
+									<div class="slide_img">
+										<img src="Img/Testimonial/1.jpg" alt="Testimonial-Img" />
 									</div>
-									<!-- Testimonial Slider End -->
-									<!-- Testimonial Slider Start -->
-									<div class="slide-content">
-										<div class="user-text">
-											<p>
-												Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut
-												consectetur numquam, iure reiciendis earum suscipit veniam
-												consequatur distinctio obcaecatir.
-											</p>
-											<h3>Rene</h3>
-											<p>Perez</p>
-										</div>
-										<div class="user-img">
-											<img src="Img/Testimonial/3.jpg" alt="Testimonial-Img" />
-										</div>
-									</div>
-									<!-- Testimonial Slider End -->
-									<!-- Testimonial Slider Start -->
-									<div class="slide-content">
-										<div class="user-text">
-											<p>
-												Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut
-												consectetur numquam, iure reiciendis earum suscipit veniam
-												consequatur distinctio obcaecatir.
-											</p>
-											<h3>Julia</h3>
-											<p>Peguero</p>
-										</div>
-										<div class="user-img">
-											<img src="Img/Testimonial/4.jpg" alt="Testimonial-Img" />
-										</div>
-									</div>
-									<!-- Testimonial Slider End -->
 								</div>
+								<!-- Slider Items Start -->
+
+								<!-- Slider Items Start -->
+								<div class="slide_items slide-2">
+									<div class="slide_text">
+										<p class="testimonial_text">
+											"Lorem ipsum dolor sit amet consectetur adipisicing elit.
+											Perspiciatis, id est saepe autem voluptatibus voluptates."
+										</p>
+										<p class="author-text">
+											Pedro Luis<span class="txt">Bordador</span>
+										</p>
+									</div>
+									<div class="slide_img">
+										<img src="Img/Testimonial/2.jpg" alt="Testimonial-Img" />
+									</div>
+								</div>
+								<!-- Slider Items Start -->
+
+								<!-- Slider Items Start -->
+								<div class="slide_items slide-3">
+									<div class="slide_text">
+										<p class="testimonial_text">
+											"Lorem ipsum dolor sit amet consectetur adipisicing elit.
+											Perspiciatis, id est saepe autem voluptatibus voluptates."
+										</p>
+										<p class="author-text">
+											Julia<span class="txt">Fotografa</span>
+										</p>
+									</div>
+									<div class="slide_img">
+										<img src="Img/Testimonial/3.jpg" alt="Testimonial-Img" />
+									</div>
+								</div>
+								<!-- Slider Items Start -->
+
+								<!-- Slider Items Start -->
+								<div class="slide_items slide-4">
+									<div class="slide_text">
+										<p class="testimonial_text">
+											"Lorem ipsum dolor sit amet consectetur adipisicing elit.
+											Perspiciatis, id est saepe autem voluptatibus voluptates."
+										</p>
+										<p class="author-text">
+											Alverto<span class="txt">Empresario</span>
+										</p>
+									</div>
+									<div class="slide_img">
+										<img src="Img/Testimonial/4.jpg" alt="Testimonial-Img" />
+									</div>
+								</div>
+								<!-- Slider Items Start -->
 							</div>
+							<!-- Buttons next and prev Start -->
+							<div class="slide_button">
+								<div class="nextbtn"></div>
+								<div class="prevbtn"></div>
+							</div>
+							<!-- Bottons righ and left End -->
 						</div>
 					</div>
 				</div>
@@ -774,7 +853,6 @@
 				</div>
 			</section>
 			<!-- Contact Section End -->
-
 			<!-- Contents Section End-->
 		</div>
 		<!-- Main End -->
@@ -798,11 +876,14 @@
 		</div>
 		<!-- Services Item Dedeils Popup End -->
 
-		<!-- Custom Vemdor Anime.js -->
-		<script src="Vendor/Js/anime.min.js"></script>
 		<!-- Custom Js Main.js -->
 		<script src="Js/Main.js"></script>
-		<!-- Custom  Vendor fontawesome -->
+		<!-- Script Vendor Bootstrap -->
+		<script src="Vendor/Js/bootstrap.min.js"></script>
+		<script src="Vendor/Js/bootstrap.bundle.min.js"></script>
+		<!-- Script Vemdor Anime.js -->
+		<script src="Vendor/Js/anime.min.js"></script>
+		<!-- Script Vendor fontawesome -->
 		<script src="Vendor/Js/fontawesome.js"></script>
 	</body>
 </html>
