@@ -394,7 +394,16 @@ button {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	margin-top: -50px;
+	margin-top: -70px;
+}
+
+.inicio .btn {
+	margin: 15px;
+}
+
+.inicio .btn:hover {
+	transform: scale(1.1);
+	background-color: #b43105;
 }
 /** -------------------------------------------------------------------- */
 /* Header */
