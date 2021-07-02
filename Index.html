@@ -662,13 +662,14 @@
 					</div>
 					<div class="row">
 						<div class="contact-form">
-							<form action="">
+							<form action="" form name="contact" method="POST" data-netlify="true">
 								<div class="row">
 									<div class="input-group">
 										<input
 											type="text"
 											placeholder="Nombre"
 											class="input-control"
+											name="name"
 											required
 										/>
 									</div>
@@ -677,6 +678,7 @@
 											type="text"
 											placeholder="Email"
 											class="input-control"
+											name="email"
 											required
 										/>
 									</div>
@@ -685,6 +687,7 @@
 											type="text"
 											placeholder="Asunto"
 											class="input-control"
+											name="about"
 											required
 										/>
 									</div>
@@ -692,11 +695,14 @@
 										<textarea
 											placeholder="Mensaje"
 											class="input-control"
+											name="messame"
 											required
 										></textarea>
 									</div>
 									<div class="submit-btn">
-										<button type="submit" class="btn">Enviar Mensaje</button>
+										<button type="submit" class="btn" id="btnSend">
+											Enviar Mensaje
+										</button>
 									</div>
 								</div>
 							</form>
